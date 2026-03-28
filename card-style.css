@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://wallpapercave.com/wp/pHUqeRn.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    gap: 15px;
+}
+
+.nav-logo {
+    font-family: "Playwrite AR", cursive;
+    font-size: clamp(28px, 5vw, 35px);
+    color: white;
+    filter: drop-shadow(3px 6px 4px gold);
+}
+
+.navbar-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+}
+
+.a-element {
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.a-element:hover {
+    background-color: rgb(93, 11, 11);
+    transform: scale(1.05);
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 30px 20px 60px;
+}
+
+.menu-heading {
+    font-family: "Playwrite AR", cursive;
+    color: gold;
+    margin-bottom: 35px;
+    font-size: clamp(28px, 5vw, 42px);
+    text-shadow: 2px 2px 8px black;
+}
+
+/* Cards */
+.cafe-cards {
+    transition: transform 0.5s ease;
+}
+
+.cafe-cards:hover {
+    transform: translateY(-12px);
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.cafe-card-img {
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-body {
+    font-family: "Playwrite AR", cursive;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card:hover .card-body {
+    background-color: black;
+    color: aliceblue;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .navbar-custom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-right {
+        width: 100%;
+    }
+
+    .cafe-card-img {
+        height: 240px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .navbar-custom {
+        padding: 15px;
+    }
+
+    .a-element {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .cafe-card-img {
+        height: 220px;
+    }
+
+    .card-body p {
+        font-size: 13px;
+    }
+}

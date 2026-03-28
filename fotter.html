@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Comfort - Contact Us</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 30px;
+            gap: 15px;
+        }
+
+        .nav-logo {
+            font-family: "Playwrite AR", cursive;
+            font-size: clamp(28px, 5vw, 35px);
+            color: white;
+            filter: drop-shadow(3px 6px 4px gold);
+        }
+
+        .navbar-right {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .navbar-right a {
+            text-decoration: none;
+        }
+
+        .a-element {
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            font-style: italic;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .a-element:hover {
+            background-color: rgb(93, 11, 11);
+            transform: scale(1.05);
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 700px;
+            padding: 30px 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .contact-form h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: clamp(28px, 5vw, 38px);
+            font-family: "Playwrite AR", cursive;
+            color: white;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 48%;
+            padding: 14px 12px;
+            margin-bottom: 18px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-form h4 {
+            width: 100%;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            min-height: 120px;
+            resize: none;
+        }
+
+        .contact-form #button {
+            width: 200px;
+            height: 55px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px auto 0;
+            transition: 0.4s ease;
+        }
+
+        .contact-form #button:hover {
+            background: black;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            margin-top: 40px;
+            padding-top: 40px;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-content {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .footer-content h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: gold;
+        }
+
+        .footer-content p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-content ul li {
+            margin: 10px 0;
+        }
+
+        .footer-content ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-content ul li a:hover {
+            color: #f18930;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f18930;
+        }
+
+        .bottom-bar {
+            background: #f18930;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 30px;
+        }
+
+        .bottom-bar p {
+            color: #343434;
+            margin: 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .navbar-custom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar-right {
+                width: 100%;
+            }
+
+            .contact-form input {
+                width: 100%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .navbar-custom {
+                padding: 15px;
+            }
+
+            .a-element {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+
+            .contact-form {
+                padding: 20px 15px;
+            }
+
+            .contact-form h1 {
+                font-size: 24px;
+            }
+
+            .contact-form #button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <section class="navbar-custom">
+        <h1 class="nav-logo">Cafe <span style="color: gold;">Comfort</span></h1>
+
+        <div class="navbar-right">
+            <a class="a-element" href="index.html">HOME</a>
+            <a class="a-element" href="about.html">ABOUT</a>
+            <a class="a-element" href="cards.html">MENU</a>
+            <a class="a-element" href="fotter.html">CONTACT US</a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjgpgeqg" method="POST">
+
+            <input type="hidden" name="_subject" value="New Cafe Message">
+            <input type="hidden" name="_captcha" value="false">
+
+            <h1>Contact Us Form</h1>
+
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="mobile" placeholder="Mobile" required>
+
+            <h4>Type Your Message Here...</h4>
+            <textarea name="message" placeholder="Enter your message..." required></textarea>
+
+            <input type="submit" value="Send" id="button">
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: cafecomfort@gmail.com</p>
+                <p>Phone: +121 56556 565556</p>
+                <p>Address: Your Address, 123 Street</p>
+            </div>
+
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cards.html">Menu</a></li>
+                    <li><a href="footer.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/_dad_lover_7417/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jyothi-bangaram-aravapalli-26210a245/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="bottom-bar">
+            <p>&copy; 2024 Cafe Comfort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function () {
+            setTimeout(() => this.reset(), 1000);
+        });
+    </script>
+
+</body>
+
+</html>
